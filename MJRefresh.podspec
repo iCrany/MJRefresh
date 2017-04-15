@@ -6,8 +6,10 @@ Pod::Spec.new do |s|
     s.license      = 'MIT'
     s.authors      = {'MJ Lee' => '199109106@qq.com'}
     s.platform     = :ios, '6.0'
-    s.source       = {:git => 'https://github.com/CoderMJLee/MJRefresh.git', :tag => s.version}
+    s.source       = {:git => 'https://github.com/iCrany/MJRefresh.git', :tag => s.version}
     s.source_files = 'MJRefresh/**/*.{h,m}'
     s.resource     = 'MJRefresh/MJRefresh.bundle'
     s.requires_arc = true
+    s.vendored_frameworks = "Carthage/Build/iOS/MJRefresh.framework"
+    s.prepare_command = "/usr/bin/ruby build_framework.rb"
 end
